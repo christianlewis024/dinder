@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Header from "./Header"
 import TinderCards from "./TinderCards"
+import SwipeButtons from "./SwipeButtons"
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
          </Route>
          <Route path="/">
           <TinderCards/>
+          <SwipeButtons/>
+
+
          </Route>
-     
-    
      </Switch>
     </Router>
     </div>
