@@ -1,9 +1,11 @@
 import React from 'react'
 import "./Chats.css"
 import Chat from "./Chat"
+import {Link} from "react-router-dom"
 
-function Chats() {
+function Chats({ name, message, profilePic}) {
     return (
+        <Link to={`/chat/${name}`}>
         <div className="chats">
             <Chat 
             name="Mark"
@@ -27,6 +29,7 @@ function Chats() {
             
             />
         </div>
+        </Link>
     )
 }
 
