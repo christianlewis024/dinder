@@ -4,17 +4,25 @@ import './App.css';
 import Header from "./Header"
 import TinderCards from "./TinderCards"
 import SwipeButtons from "./SwipeButtons"
+import Chats from "./Chats"
+import ChatScreen from "./ChatScreen"
 
 function App() {
   return (
     <div className="app">
      <Router>
-     <Header/>
+    
        <Switch>
+         <Route path="/chat/:person">
+         <Header backButton="/chat"/>
+         <ChatScreen/>
+         </Route>
          <Route path="/chat">
-           <h1> i am the chat page</h1>
+         <Header backButton="/"/>
+          <Chats/>
          </Route>
          <Route path="/">
+         <Header/>
           <TinderCards/>
           <SwipeButtons/>
 
